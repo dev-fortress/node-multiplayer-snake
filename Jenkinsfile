@@ -12,7 +12,7 @@ node ('ubuntu-app-agent'){
     }
     stage('Post-to-dockerhub') {
     
-     docker.withRegistry('https://registry.hub.docker.com') {
+     docker.withRegistry('https://registry.hub.docker.com', 'DockerCreds') {
             app.push("test")
         			}
          }
