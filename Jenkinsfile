@@ -30,4 +30,8 @@ node ('ubuntu-app-agent'){
     stage('DAST'){
         build 'ZAP_CI'
     }
+    
+    stage('DAST - ZAP-Pipeline'){
+        build 'ZAP_Pipeline'
+    }
 }
